@@ -1,0 +1,27 @@
+include <stdio.h>
+
+int main()
+{
+   int idade;
+   
+
+   printf ("digite sua idade: \n");
+   scanf("%d", &idade);
+   printf ("sua idade é: %d\n", idade);
+
+   if(idade >= 18){
+    printf("é permitido bebida alcóolica!\n");
+   } else {
+    printf("não é permitido bebida alcóolica\n");
+   }
+ if(idade < 16){
+    printf("você não possui idade para votar \n");
+     }else if(idade < 18 ){
+        printf("o voto é facultativo \n");}
+     else if(idade < 70 ){
+        printf("voto obrigatório \n");
+     } else{
+        printf("voto facultativo\n");
+     }
+     return 0;
+    }
