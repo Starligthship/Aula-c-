@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+
+int Q; 
+double n = 0, soma = 0;
+
+printf("digite quantas vezes quer somar: \n ");
+scanf("%d",&Q ); 
+
+if(Q <= 0 ) {
+    printf("numero invalido\n");
+    return 1;
+}
+ for (int i = 1; i <= Q; i++){
+    printf("digite o %d numeros:", i );
+    scanf("%lf", &n);
+    soma += n;
+ }
+printf("A soma total dos %d números é: %.2lf\n", Q , soma);
+
+return 0;
+
+}
