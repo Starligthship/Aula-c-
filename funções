@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+float maior_numero(float num1, float num2){
+   if (num1>num2)
+   return num1 ; 
+   else
+   return num2;
+}
+
+int main (){
+
+    float x , y, m ;
+
+    printf("digite seu primeiro numero: \n");
+    scanf("%f", &x );
+    printf("digite seu segundo numero:\n");
+    scanf("%f", &y);
+
+
+m = maior_numero(x, y);
+
+printf("maior numero é %.2f\n", m);
+
+
+}
