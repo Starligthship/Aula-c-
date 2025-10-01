@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float salario, imposto = 0, percentual = 0;
+
+    printf("Digite o salario: R$ ");
+    scanf("%f", &salario);
+
+    if (salario <= 1903.98) {
+        percentual = 0;
+        imposto = 0;
+    } else if (salario <= 2826.65) {
+        percentual = 7.5;
+        imposto = salario * 0.075;
+    } else if (salario <= 3751.05) {
+        percentual = 15;
+        imposto = salario * 0.15;
+    } else if (salario <= 4664.68) {
+        percentual = 22.5;
+        imposto = salario * 0.225;
+    } else {
+        percentual = 27.5;
+        imposto = salario * 0.275;
+    }
+
+    printf("Percentual de IR: %.1f%%\n", percentual);
+    printf("Valor do imposto: R$ %.2f\n", imposto);
+
+    return 0;
+}
