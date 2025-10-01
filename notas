@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#define QTD 30
+
+int main() {
+    float nota1[QTD], nota2[QTD], media[QTD];
+    float soma = 0, mediaTurma;
+    int i;
+
+    
+    for (i = 0; i < QTD; i++) {
+        printf("Digite a primeira nota do aluno %d: ", i + 1);
+        scanf("%f", &nota1[i]);
+
+        printf("Digite a segunda nota do aluno %d: ", i + 1);
+        scanf("%f", &nota2[i]);
+
+        media[i] = (nota1[i] * 2 + nota2[i] * 3) / 5;
+        soma += media[i];
+    }
+
+    
+    mediaTurma = soma / QTD;
+    printf("\nMédia da turma: %.2f\n", mediaTurma);
+
+   
+    printf("\nAlunos acima da média da turma:\n");
+    for (i = 0; i < QTD; i++) {
+        if (media[i] > mediaTurma) {
+            printf("Aluno %d -> Nota1: %.2f | Nota2: %.2f | Média: %.2f\n",
+                   i + 1, nota1[i], nota2[i], media[i]);
+        }
+    }
+
+    return 0;
+}
